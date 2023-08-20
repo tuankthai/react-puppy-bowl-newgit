@@ -1,0 +1,7 @@
+ .searchText {
+     display: flex;
+     flex-direction: row;
+     margin-left: 2em;
+    width: 20em;
+        
+ }

@@ -1,0 +1,27 @@
+.detailsClass {
+    display: flex;
+    flex-direction: column;
+    /* padding: 2.5em; */
+    padding: 1.3em 3.5em 1.0em 6.0em;
+    border-radius: 5%;
+    background-color: #A2AD59;
+    border-color: black;
+    margin: 25em;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background-image: url("../assets/green-border.jpeg");
+    font-style: italic;
+
+}
+
+
+#details-h2 {
+    text-align: center;
+    font-style: italic;
+    font-size: 2rem;
+    /* color: #c9e265; */
+    color: #134611;
+
+
+}
