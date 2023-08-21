@@ -7,14 +7,6 @@ function SearchBar({ puppies }) {
     const [searchText, setSearchText] = useState("");
     const navigate = useNavigate();
 
-    // async function handleSubmit(e) {
-    //     e.preventDefault();
-    //     console.log("hello handleSubmit")
-    //     console.log("text to search: ", searchText)
-
-    // }
-
-
     return (
         // <div className="searchText">
         <div className="searchText">
