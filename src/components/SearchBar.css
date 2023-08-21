@@ -1,7 +1,22 @@
  .searchText {
      display: flex;
-     flex-direction: row;
+     flex-direction: column;
+     /* flex-direction: row; */
      margin-left: 2em;
     width: 20em;
+    justify-content: center;
         
+ }
+
+ .searchResults {
+     display: flex;
+     flex-direction: column;
+     
+
+ }
+
+ .center{
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
  }

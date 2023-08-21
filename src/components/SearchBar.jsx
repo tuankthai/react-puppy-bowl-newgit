@@ -1,43 +1,62 @@
 import { useState } from "react"
 import './SearchBar.css'
+import FilterList from "./FilterList";
+import { useNavigate } from "react-router-dom";
 
-function SearchBar() {
+function SearchBar({ puppies }) {
     const [searchText, setSearchText] = useState("");
+    const navigate = useNavigate();
 
+    // async function handleSubmit(e) {
+    //     e.preventDefault();
+    //     console.log("hello handleSubmit")
+    //     console.log("text to search: ", searchText)
 
-    async function handleSubmit(e) {
-        e.preventDefault();
-        console.log("hello handleSubmit")
-        console.log("text to search: ", searchText)
-
-    }
+    // }
 
 
     return (
+        // <div className="searchText">
         <div className="searchText">
-
-            <form onSubmit={handleSubmit}>
-                {/* <label htmlFor="searchText"> Search Playewr Name:  */}
-                {/* <label> Search for Player Name:  <span>     </span>  */}
-                <label> Search for Player Name: 
+           
+            <label htmlFor="searchText"> Search Player Name: </label> 
+            {/* <label> Search for Player Name: </label> */}
 
                 <input value={searchText}
                     onChange={(e) => {
                         setSearchText(e.target.value);
+                        console.log(searchText)
                     }}
 
                     type="text" name="searchText" id="searchText"
                     placeholder="searchText" 
                 />
 
-                </label>
+                
                 <br />
                 <br />
-                <div>              
-                    <button >Search Your Players</button>
-                    <button >Back to All Players List</button>
-                </div>
-            </form>
+                
+            <div> 
+                    <button 
+                        onClick={
+                            () => {
+                                console.log("Search Your Players clicked: ", searchText) ;
+                                const newPuppyArr = puppies.filter(function (puppy) {
+                                    //find puppy has name containing search text
+                                    return puppy.name.includes(searchText);
+                                });
+                                console.log("new newPuppyArr: ", newPuppyArr)
+                                
+                                //display new puppies array... TODO
+                                navigate('/newlist', { state: newPuppyArr });
+
+                                setSearchText("")
+
+                            }}>
+                        Search Player Name</button>
+                    
+               
+            </div>
         </div>
     )
 }

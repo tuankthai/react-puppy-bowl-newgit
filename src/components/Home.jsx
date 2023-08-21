@@ -25,7 +25,7 @@ export default function Home() {
 
             <div>
                 <br /><h2 id="page-h2">Search Your Puppy Players</h2><br />
-                <SearchBar/>
+                <SearchBar puppies={puppies} />
             </div>
             <div>
 

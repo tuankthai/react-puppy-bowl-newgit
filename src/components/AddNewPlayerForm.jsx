@@ -12,7 +12,7 @@ const BASE_URL = 'https://fsa-puppy-bowl.herokuapp.com';
 function AddNewPlayerForm({puppies, setPuppies}) {
     const [name, setName] = useState("")
     const [breed, setBreed] = useState("")
-    const [status, setStatus] = useState("")
+    const [status, setStatus] = useState("bench")
     const [imageUrl, setImageUrl] = useState("")
     const [teamId, setTeamId] = useState("")
     const [error, setError] = useState(null)
@@ -24,6 +24,7 @@ function AddNewPlayerForm({puppies, setPuppies}) {
         console.log("hello handleSubmit")
 
         try {
+            //need to read status field value. 
             
             const playerObj = {
                 name: name,

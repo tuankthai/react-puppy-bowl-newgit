@@ -51,6 +51,7 @@ function AllPlayers({ puppies, setPuppies }) {
         }
         // let ignore = false;
         fetchPuppies()
+        // console.log("after fetch puppies: ", puppies)
 
     }, [puppies])
 
@@ -58,7 +59,9 @@ function AllPlayers({ puppies, setPuppies }) {
         
         <div className="all-players-container">
             {puppies.map((puppy) => {
-                return <PuppyBox key={puppy.id} puppy={puppy}  />;
+                // console.log("map puppy: ", puppy)
+                return <PuppyBox key={puppy.id} puppy={puppy} puppies={puppies} setPuppies={setPuppies}
+                     />;
             })}
 
         </div>
